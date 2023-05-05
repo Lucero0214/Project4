@@ -1,9 +1,23 @@
 
-
-#cocktail{
-    background-color: aqua;
+body{
+    background-color: blanchedalmond;
 }
+#dog{
+    margin:0 auto;
+    padding-bottom: 2rem;
 
+}
+#map{
+    width: 500px;
+    height: 280px;
+    margin: 0 auto;
+    border: 3px solid red;
+    padding: 2rem 2rem;
+}
 h2 {
-    background-color: aqua;
+    color: black;
+text-align: center;
+}
+img{
+    margin: 0 auto;
 }
