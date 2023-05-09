@@ -1,20 +1,56 @@
 
 body{
     background-color: blanchedalmond;
+    background-image: url('images/colors.jpg');
+}
+header{
+    background-color: lightcoral;
+padding: 2rem;
 }
 #dog{
+    width: 500px;
     margin:0 auto;
     padding-bottom: 2rem;
-
 }
+
+#dog-image-div {
+    width: 500px;
+  }
+
+  
+  #listImageContainer{
+    margin-top:30px;
+  }
+  
+  #doggoDropDown{
+    padding:2px;
+  }
+  
+  #dogInfo{
+    text-align:left;
+    margin-top:35px;
+  }
+  
+  .form-control{
+    font-size:1.2em;
+  }
+  
+  .container-fluid{
+    background:#efefef;
+    margin-top:30px;
+    padding-bottom:30px;
+  }
+  
+
 #map{
     width: 500px;
-    height: 280px;
+    height: 300px;
     margin: 0 auto;
     border: 3px solid red;
     padding: 2rem 2rem;
 }
 h2 {
+    background-image: url('images/bone.png');
     color: black;
 text-align: center;
 }
