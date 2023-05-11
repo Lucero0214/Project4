@@ -22,6 +22,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var marker = L.marker([37.98415, -122.02766],).addTo(map);
 marker.bindPopup("<b 9>Baldwin Dog Park!</b><br>2750 Parkside Cir, Concord, CA 94519.").openPopup();
 
+//creating dropdown element
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -86,4 +87,5 @@ function init() {
     } // end if/else
   }); //end addEventListener - change
 }
+
 
