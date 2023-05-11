@@ -1,0 +1,22 @@
+[
+    {
+        "code": "CC",
+        "name": "Concord",
+        "members": ["Baldwin Dog Park", "Newhall Dog Park", "Iron Horse Park"]
+    },
+    {
+        "code": "BK",
+        "name": "Berkeley",
+        "members": ["Ohlone Dog Park", "César E. Chávez Park", "Acton Parker Dog Park"]
+    }, 
+    {
+        "code": "SF",
+        "name": "Sanfrancisco",
+        "members": ["Channel Street Dog Park", "Mission Creek Dog Park", "SoMa West Dog Park", "Upper Douglass Dog Play Area"]
+    },
+    {
+        "code": "SJ",
+        "name": "Sanjose",
+        "members": ["Hart's Dog Park", "Discovery Dog Park", "Welch Dog Park"]
+    } 
+]
