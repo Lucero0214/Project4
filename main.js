@@ -94,7 +94,7 @@ function init() {
     // handle if no house selected
     if (members.length === 0) {
       let item = document.createElement("LI");
-      item.innerText = "No Parklocation Selected";
+      item.innerText = "No Park location Selected";
       container.appendChild(item);
     } else {
       // create the li's and append to the ul
