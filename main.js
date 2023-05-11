@@ -14,14 +14,33 @@ function displayDog(img) {
 };
 //dog park map
 
-var map = L.map('map').setView([37.98415, -122.02766], 13);
+var locations = [
+  ["Baldwin Park", 37.98415, -122.02766],
+  ["Ohlone Dog Park", 37.8735, -122.2743],
+  ["Channel Street Dog Park", 37.8735, -122.2743],
+  ["Osage Station Park", 37.8035, -121.9795],
+  ["Newhall Dog Park", 37.9556, -121.9799],
+  ["César E. Chávez Park", 37.8926, -122.3148],
+  ["Mission Creek Dog Park", 37.7709, -122.3992],
+  ["Iron Horse Park", 38.0176, -122.0522],
+  ["Acton Parker Dog Park", 37.8602, -122.2826],
+  ["SoMa West Dog Park", 37.7703, -122.4217],
+  ["Oak Hill Park", 37.8442, -121.9863],
+  ["Hap Magee Ranch Park", 37.8404, -122.0199]
+];
+
+var map = L.map('map').setView([37.8832, -122.0907], 13); 
+mapLink =
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
+  maxZoom: 10,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-var marker = L.marker([37.98415, -122.02766],).addTo(map);
-marker.bindPopup("<b 9>Baldwin Dog Park!</b><br>2750 Parkside Cir, Concord, CA 94519.").openPopup();
 
+for (var i = 0; i < locations.length; i++) {
+  marker = new L.marker([locations[i][1], locations[i][2]])
+    .bindPopup(locations[i][0])
+    .addTo(map);
+}
 //creating dropdown element
 document.addEventListener("DOMContentLoaded", init);
 
