@@ -11,12 +11,12 @@
     }, 
     {
         "code": "SF",
-        "name": "Sanfrancisco",
-        "members": ["Channel Street Dog Park", "Mission Creek Dog Park", "SoMa West Dog Park", "Upper Douglass Dog Play Area"]
+        "name": "San Francisco",
+        "members": ["Channel Street Dog Park", "Mission Creek Dog Park", "SoMa West Dog Park"]
     },
     {
-        "code": "SJ",
-        "name": "Sanjose",
-        "members": ["Hart's Dog Park", "Discovery Dog Park", "Welch Dog Park"]
+        "code": "DV",
+        "name": "Danville",
+        "members": ["Hap Magee Ranch Park", "Oak Hill Park", "Osage Station Park"]
     } 
 ]
