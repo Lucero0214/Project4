@@ -1,38 +1,144 @@
 
 body{
-    background-color: blanchedalmond;
-    background-image: url('images/colors.jpg');
+    background-color: white;
 }
 header{
     background-color: lightcoral;
 padding: 2rem;
 }
 #dog{
-    width: 500px;
     margin:0 auto;
-    padding-bottom: 2rem;
 }
 #map{
     width: 500px;
-    height: 300px;
-    margin: 0 auto;
-    border: 10px solid #FF9BAD;
-    padding: 2rem 2rem;
+    height: 400px;
+    border: 5px solid #FF9BAD;
     color: yellow;
 }
 h2 {
     color: black;
 text-align: center;
 }
-img{
-    margin: 0 auto;
+#container {
+    background-image: url('images/colors.jpg');
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#dog img {
+    width: 500px;
+    height:400px;
+    align-items: left;
+    border: 5px solid #FF9BAD;
 }
 #parks{
     border: 3px solid #ddd;
     padding: 2rem;
     width: 300px;
     margin: 0 auto;
+    background-color: #FF9BAD;
 }
 form {
     text-align: center;
+    background-color: #FF9BAD;
 }
+.bone{
+    margin: 0 auto;
+    position: relative;
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .c1, .c2, .c3, .c4{
+    background:#fff;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position:absolute;
+  }
+  .c1{
+    left: 0;
+    top: 0;
+  }
+  .c2{
+    right: 0;
+    top: 0;
+  }
+  .c3{
+    left: 0;
+    bottom: 0;
+  }
+  .c4{
+    bottom: 0;
+    right: 0;
+  }
+  .b1 {
+    background:#fff;
+    height: 30px;
+    width: 120px;
+    position:absolute;  
+    left: 15px;
+    top: 15px;
+  }
+  .b2 {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+  @media screen and (max-width: 800px) { 
+    #container {
+      display: grid;
+      grid-template-columns: 1fr;
+
+  }
+  #dog{
+      margin:0 auto;
+      padding-bottom: 2rem;
+  }
+  #map{
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      border: 10px solid #FF9BAD;
+      padding: 2rem 2rem;
+      color: yellow;
+  }
+}
+  #dog img {
+      width: 400px;
+      height:400px;
+      border: 5px solid #FF9BAD;
+  }
+  @media screen and (max-width: 600px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+å
+    }
+    #dog{
+        margin:0 auto;
+        padding-bottom: 2rem;
+    }
+    #map{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border: 10px solid #FF9BAD;
+        padding: 2rem 2rem;
+        color: yellow;
+    }
+    #dog img {
+        width: 300px;
+        height:300px;
+        border: 5px solid #FF9BAD;
+    }
+  }
