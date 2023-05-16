@@ -41,6 +41,9 @@ for (var i = 0; i < locations.length; i++) {
     .bindPopup(locations[i][0])
     .addTo(map);
 }
+function zoomSelection(coordinates) {
+  map.setView(coordinates)
+}
 //creating dropdown element
 document.addEventListener("DOMContentLoaded", init);
 
@@ -76,6 +79,7 @@ function init() {
   parklocation.addEventListener("change", (e) => {
     //get the parklocation code from the select
     const code = e.target.value;
+    
     let members = [];
     // loop through parklocation array
     // check for a matching parklocation code,
