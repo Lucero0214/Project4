@@ -1,8 +1,3 @@
-//dog button
-const dogButton = document.getElementById('btn-dog');
-dogButton.addEventListener('click', fetchDogImage);
-
-function fetchDogImage () {
 fetch('https://dog.ceo/api/breeds/image/random')
   .then((response) => response.json())
   .then(data => {
@@ -17,6 +12,8 @@ function displayDog(img) {
   const pic = `<img src="${img}">`;
   document.getElementById("dog").innerHTML = pic;
 };
+
+
 //dog park map
 
 var locations = [
@@ -70,10 +67,11 @@ function init() {
         parklocation.appendChild(option);
       });
     })
+
     .catch((err) => {
       console.log("oops ", err.message);
     });
-  }
+
   // DOM ref to the select dropdown
 
   let parklocation =
