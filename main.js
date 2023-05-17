@@ -1,3 +1,8 @@
+//dog button
+const dogButton = document.getElementById('btn-dog');
+dogButton.addEventListener('click', fetchDogImage);
+
+function fetchDogImage () {
 fetch('https://dog.ceo/api/breeds/image/random')
   .then((response) => response.json())
   .then(data => {
@@ -29,7 +34,7 @@ var locations = [
   ["Hap Magee Ranch Park", 37.8404, -122.0199]
 ];
 
-var map = L.map('map').setView([37.8832, -122.0907], 13); 
+var map = L.map('map').setView([37.8832, -122.0907], 15); 
 mapLink =
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 10,
@@ -42,7 +47,7 @@ for (var i = 0; i < locations.length; i++) {
     .addTo(map);
 }
 function zoomSelection(coordinates) {
-  map.setView(coordinates)
+  map.setView(coordinates, 10)
 }
 //creating dropdown element
 document.addEventListener("DOMContentLoaded", init);
@@ -68,7 +73,7 @@ function init() {
     .catch((err) => {
       console.log("oops ", err.message);
     });
-
+  }
   // DOM ref to the select dropdown
 
   let parklocation =
@@ -79,7 +84,21 @@ function init() {
   parklocation.addEventListener("change", (e) => {
     //get the parklocation code from the select
     const code = e.target.value;
-    
+    console.log(code)
+//if selection = concord than 
+//setZoom on the coordinates for Baldwin
+if (code === "CC") {
+  zoomSelection ([locations[0][1], locations[0][2]])
+} 
+if (code === "BK") {
+  zoomSelection ([locations[5][1], locations[5][2]])
+} 
+if (code === "DV") {
+  zoomSelection ([locations[4][1], locations[4][2]])
+} 
+if (code === "SF") {
+  zoomSelection ([locations[6][1], locations[6][2]])
+} 
     let members = [];
     // loop through parklocation array
     // check for a matching parklocation code,
