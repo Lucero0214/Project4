@@ -1,4 +1,7 @@
 
+* {
+  box-sizing: border-box;
+}
 body{
   margin: 0;
   padding: 0;
@@ -138,8 +141,13 @@ form {
 .navbar a:hover{
   background-color: orange;
 }
+footer{
+  background-color: #FF9BAD;
+  width: 100%;
+  padding: 2;
+}
 
-  @media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) { 
     #container {
       display: grid;
       grid-template-columns: 1fr;
