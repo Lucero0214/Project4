@@ -31,10 +31,10 @@ var locations = [
   ["Hap Magee Ranch Park", 37.8404, -122.0199]
 ];
 
-var map = L.map('map').setView([37.8832, -122.0907], 12); 
+var map = L.map('map').setView([37.8832, -122.0907], 13); 
 mapLink =
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 12,
+  maxZoom: 11,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
@@ -92,7 +92,7 @@ if (code === "BK") {
   zoomSelection ([locations[5][1], locations[5][2]])
 } 
 if (code === "DV") {
-  zoomSelection ([locations[4][1], locations[4][2]])
+  zoomSelection ([locations[11][1], locations[11][2]])
 } 
 if (code === "SF") {
   zoomSelection ([locations[6][1], locations[6][2]])
