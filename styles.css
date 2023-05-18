@@ -19,6 +19,7 @@ padding: 2rem;
     height: 400px;
     border: 5px solid #FF9BAD;
     color: yellow;
+    padding-bottom: 1.5rem;
 }
 h1{
   text-align: center;
@@ -45,12 +46,30 @@ p{
 }
 .buttons  {
   display: flex;
-  align-items: center;
   justify-content: space-around;   
   flex-wrap: wrap; 
   width: 100%;  
 }
+#btn-dog {
+  margin: 10px;
+  padding: 2px 12px;
+  border-radius: 5px;
+  outline: none;  
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #FF9BAD;
+}
 
+#btn-dog:hover {
+  background-color: #ADD8E6;
+  transform: scale(1.2);
+}
+
+#btn-dog:active{
+  transform: scale(.9);
+}
 #parks{
     border: 3px solid #ddd;
     padding: 1.5rem;
@@ -140,11 +159,6 @@ form {
 }
 .navbar a:hover{
   background-color: orange;
-}
-footer{
-  background-color: #FF9BAD;
-  width: 100%;
-  padding: 2;
 }
 
 @media screen and (max-width: 800px) { 
