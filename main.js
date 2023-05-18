@@ -31,10 +31,10 @@ var locations = [
   ["Hap Magee Ranch Park", 37.8404, -122.0199]
 ];
 
-var map = L.map('map').setView([37.8832, -122.0907], 15); 
+var map = L.map('map').setView([37.8832, -122.0907], 12); 
 mapLink =
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 10,
+  maxZoom: 12,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
@@ -44,7 +44,7 @@ for (var i = 0; i < locations.length; i++) {
     .addTo(map);
 }
 function zoomSelection(coordinates) {
-  map.setView(coordinates, 10)
+  map.setView(coordinates, 12)
 }
 //creating dropdown element
 document.addEventListener("DOMContentLoaded", init);
