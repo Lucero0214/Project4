@@ -5,7 +5,7 @@
 body{
   margin: 0;
   padding: 0;
-    background-color: white;
+  background-color: white;
 }
 header{
     background-color: #FF9BAD;
@@ -34,7 +34,7 @@ p{
 }
 #container {
     background-image: url('images/colors.jpg');
-    padding: 1rem;
+    padding: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -158,13 +158,14 @@ form {
   text-align: center;
 }
 .navbar a:hover{
-  background-color: orange;
+  background-color:#ADD8E6;
 }
 
 @media screen and (max-width: 800px) { 
     #container {
       display: grid;
       grid-template-columns: 1fr;
+      padding: 10%;
 
   }
   #dog{
@@ -175,7 +176,7 @@ form {
       width: 400px;
       height: 400px;
       margin: 0 auto;
-      border: 10px solid #FF9BAD;
+      border: 5px solid #FF9BAD;
       padding: 2rem 2rem;
       color: yellow;
   }
@@ -189,6 +190,7 @@ form {
     #container {
         display: grid;
         grid-template-columns: 1fr;
+        padding: 10%;
 
     }
     #dog{
@@ -199,9 +201,8 @@ form {
         width: 300px;
         height: 300px;
         margin: 0 auto;
-        border: 10px solid #FF9BAD;
+        border: 5px solid #FF9BAD;
         padding: 2rem 2rem;
-        color: yellow;
     }
     #dog img {
         width: 300px;
