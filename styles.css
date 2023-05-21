@@ -13,6 +13,10 @@ header{
 }
 #dog{
     margin:0 auto;
+    object-fit:contain;
+    background-image: url(images/loader.gif);
+    background-size: cover;
+    background-position: center;
 }
 #map{
     width:500px;

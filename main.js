@@ -11,11 +11,20 @@ fetch('https://dog.ceo/api/breeds/image/random')
 function displayDog(img) {
   const pic = `<img src="${img}">`;
   document.getElementById("dog").innerHTML = pic;
-};
+}
+
+function fetchDogImage() {
+  fetch('https://dog.ceo/api/breeds/image/random')
+  .then((response) => response.json())
+  .then(data => {
+    let img = data.message;
+    displayDog(img);
+    console.log(data)
+  })
+}
 
 
 //dog park map
-
 var locations = [
   ["Baldwin Park", 37.98415, -122.02766],
   ["Ohlone Dog Park", 37.8735, -122.2743],
@@ -80,23 +89,28 @@ function init() {
   // when the select list has changed.
 
   parklocation.addEventListener("change", (e) => {
+
+    // Get a new dog photo
+    const dogImage = document.getElementById('dog-img');
+    fetchDogImage();
+
     //get the parklocation code from the select
     const code = e.target.value;
     console.log(code)
-//if selection = concord than 
-//setZoom on the coordinates for Baldwin
-if (code === "CC") {
-  zoomSelection ([locations[0][1], locations[0][2]])
-} 
-if (code === "BK") {
-  zoomSelection ([locations[5][1], locations[5][2]])
-} 
-if (code === "DV") {
-  zoomSelection ([locations[11][1], locations[11][2]])
-} 
-if (code === "SF") {
-  zoomSelection ([locations[6][1], locations[6][2]])
-} 
+    //if selection = concord than 
+    //setZoom on the coordinates for Baldwin
+    if (code === "CC") {
+      zoomSelection ([locations[0][1], locations[0][2]])
+    } 
+    if (code === "BK") {
+      zoomSelection ([locations[5][1], locations[5][2]])
+    } 
+    if (code === "DV") {
+      zoomSelection ([locations[11][1], locations[11][2]])
+    } 
+    if (code === "SF") {
+      zoomSelection ([locations[6][1], locations[6][2]])
+    } 
     let members = [];
     // loop through parklocation array
     // check for a matching parklocation code,
@@ -126,17 +140,6 @@ if (code === "SF") {
       });
     } // end if/else
   }); //end addEventListener - change
-}
-const dogImage = document.getElementById('dog-img');
-const dogButton = document.getElementById('btn-dog');
-dogButton.addEventListener('click', fetchDogImage);
+} // end init
 
-function fetchDogImage() {
-  fetch('https://dog.ceo/api/breeds/image/random')
-  .then((response) => response.json())
-  .then(data => {
-    let img = data.message;
-    displayDog(img);
-    console.log(data)
-  })
-}
+
